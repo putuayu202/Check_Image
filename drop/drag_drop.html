@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Drag And Drop</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  s<link rel="stylesheet" type="text/css" href="gaya.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#sortable1, #sortable2" ).sortable({
+      connectWith: ".connectedSortable"
+    }).disableSelection();
+  } );
+  </script>
+</head>
+<body>
+ 
+<ul id="sortable1" class="connectedSortable">
+  <li class="merah">merah</li>
+  <li class="biru">biru</li>
+  <li class="ijo">hijau</li>
+  <li class="item">hitam </li>
+  <li class="kuning">kuning</li>
+</ul>
+ <ul id="sortable2" class="connectedSortable">
+  </ul>
+
+ 
+ 
+</body>
+</html>

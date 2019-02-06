@@ -1,0 +1,57 @@
+#sortable1, #sortable2 {
+    border: 1px solid #eee;
+    width: 142px;
+    height: 215px;
+    list-style-type: none;
+    margin: 0;
+    padding: 5px 0 0 0;
+    float: left;
+    margin-right: 10px;
+    background-color: grey;
+  }
+  #sortable1 li, #sortable2 li {
+    margin: 0 5px 5px 5px;
+    padding: 5px;
+    font-size: 1.2em;
+    width: 120px;
+  }
+  .merah{
+    background-color: red;
+    color: white;
+    cursor: grab;
+  }
+  .merah:active{
+    cursor: grabbing
+  }
+  .biru{
+    background-color: blue;
+    color: white;
+    cursor: grab;
+  }
+  .biru:active{
+    cursor: grabbing
+  }
+  .ijo{
+    background-color: green;
+    color: white;
+    cursor: grab;
+  }
+  .ijo:active{
+    cursor: grabbing
+  }
+  .item{
+    background-color: black;
+    color: white;
+    cursor: grab;
+  }
+  .item:active{
+    cursor: grabbing
+  }
+  .kuning{
+    background-color: yellow;
+    color: white;
+    cursor: grab;
+  }
+  .kuning:active{
+    cursor: grabbing
+  }

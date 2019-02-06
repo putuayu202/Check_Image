@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Featured_Campaign</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Menyisipkan Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="gaya.css">
+    <script>
+        $(document).ready(function(){
+            $('#isi').hide();
+            $("#tombol").click(function(){
+                var dany = $('#campaign').val();
+                if ( dany == ""){
+                    alert("harap isi CAMPAIGN");
+                }else{
+                    $('#isi').show(1000);
+                }
+
+                
+            });
+        });
+</script>
+</head>
+
+<body>
+
+    <!-- Membuat komponen jubotron sebagai header -->
+    <header>
+        <img src="Capture.png" id="camp">
+        <div class="jumbotron jumbotron-fluid" style="background-color: white">
+            <div class="container">
+                <h2>Campaign</h2>
+                <div class="row">
+                    <div class="col">
+                         <div class="input1">
+                                <input type="text"required id="campaign" placeholder=" masukan campaign yang anda ingin simpan">
+                                <span class="text1">Campaign Id</span>
+                                <button id="tombol" type="submit">cari</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row3">
+                     <div class="kirim">
+                        <input type="submit" name="submit" id="submit">
+                    </div>
+                </div>
+                <div class="row2">
+                    <div id="isi">
+                        <div class="col-xs-4 col-sm-3 col-md-2 nopad text-center">
+                            <label class="image-checkbox">
+                                <img class="img-responsive" src="image1.png" />
+                                <input type="checkbox" name="image_check[]" value="1" />
+                                <i class="glyphicon glyphicon-ok hidden"></i>
+                            </label>
+                        </div>
+                        <div class="col-xs-4 col-sm-3 col-md-2 nopad text-center">
+                            <label class="image-checkbox">
+                                <img class="img-responsive" src="image2.png" />
+                                <input type="checkbox" name="image_check[]" value="2" />
+                                <i class="glyphicon glyphicon-ok hidden"></i>
+                            </label>
+                        </div>
+                        <div class="col-xs-4 col-sm-3 col-md-2 nopad text-center">
+                            <label class="image-checkbox">
+                                <img class="img-responsive" src="image3.png" />
+                                <input type="checkbox" name="image_check[]" value="3" />
+                                <i class="glyphicon glyphicon-ok hidden"></i>
+                            </label>
+                        </div>
+                        <div class="col-xs-4 col-sm-3 col-md-2 nopad text-center">
+                            <label class="image-checkbox">
+                                <img class="img-responsive" src="image4.png" />
+                                <input type="checkbox" name="image_check[]" value="4" />
+                                <i class="glyphicon glyphicon-ok hidden"></i>
+                            </label>
+                        </div>
+                        <div class="col-xs-4 col-sm-3 col-md-2 nopad text-center">
+                            <label class="image-checkbox">
+                                <img class="img-responsive" src="image5.png" />
+                                <input type="checkbox" name="image_check[]" value="5" />
+                                <i class="glyphicon glyphicon-ok hidden"></i>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                    <div class="row4">
+                        <div class="status">
+                                <table id="tbl" class="table">
+                                    <tr class="atas">
+                                        <th>Hastag</th>
+                                        <th>Des</th>
+                                        <th>Title</th>
+                                        <th>edit</th>       
+                                        <th>delete</th>
+                                    </tr>
+                                  <tr>
+                                    <td clssass="field1s">#AkuTemanmu</td>
+                                    <td class="field2s">Kita Beda Tapi Tetap Satu Indonesia!</td>
+                                    <td class="field3s">Sampai Berjumpa, Arek-arek Suroboyo!</td>
+                                    <td><button type="button" id="edit" class="edit btn btn-success">Edit</button>
+                                    <button type="button" id="edit" style="display:none" class="save btn btn-primary">Save</button>
+                                    <button type="button" id="edit" style="display:none" class="cancel btn btn-danger">Cancel</button></td>
+                                    <td><button class="delete" value="Delete" onclick="deleteRow(this)">Delete</button></td> 
+                                  </tr>
+
+                                    <tr>
+                                    <td class="field1s">#SDGPIPE</td>
+                                    <td class="field2s">Ayo Pemuda Indonesia jadi Penggerak <br> Perubahan untuk Pencapaian Tujuan Pembangunan <br> Berkelanjutan!</td>
+                                    <td class="field3s">Terima kasih Filantropi Indonesia </td>
+                                    <td><button type="button" id="edit" class="edit btn btn-success">Edit</button>
+                                    <button type="button" id="edit" style="display:none" class="save btn btn-primary">Save</button>
+                                    <button type="button" id="edit" style="display:none" class="cancel btn btn-danger">Cancel</button></td>
+                                    <td><button class="delete" value="Delete" onclick="deleteRow(this)" >Delete</button></td> 
+                                 </tr>
+  
+                                    <tr>
+                                    <td class="field1s">#AkuDewasa</td>
+                                    <td class="field2s">Meningkatkan Pengetahuan Remaja terkait <br> Kesehatan Seksual dan Reproduksi</td>
+                                    <td class="field3s">Puncak Kegiatan '#AkuDewasa, Aku Tanggung Jawab</td>
+                                    <td>
+                                    <button type="button" id="edit" class="edit btn btn-success">Edit</button>
+                                    <button type="button" id="edit" style="display:none" class="save btn btn-primary" >Save</button>
+                                    <button type="button" id="edit" style="display:none" class="cancel btn btn-danger" >Cancel</button>
+                                    <td><button class="delete" value="Delete" onclick="deleteRow(this)">Delete</button></td> 
+                                    </td>
+                                  </tr>  
+                                </table>
+
+                        </div>  
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </header>
+     <script>
+        $(".image-checkbox").each(function(){
+    if($(this).find('input[type="checkbox"]').first().attr("checked")){
+        $(this).addClass('image-checkbox-checked');
+    }else{
+        $(this).removeClass('image-checkbox-checked');
+    }
+    });
+
+// sync the input state
+    $(".image-checkbox").on("click", function(e){
+    $(this).toggleClass('image-checkbox-checked');
+    var $checkbox = $(this).find('input[type="checkbox"]');
+    $checkbox.prop("checked",!$checkbox.prop("checked"));
+  
+    e.preventDefault();
+    });
+    </script>
+
+    <script>
+    $('#tbl').find('.save, .cancel').hide();
+    $('#tbl').on('click', '.edit', function(){
+    $('#tbl').find('.save, .cancel').hide();
+    $('#tbl').find('.edit').show();
+    $('*').prop('contenteditable', false)
+    $(this).hide().siblings('.save, .cancel').show();
+      currentTD = $(this).closest('td').siblings()
+      $.each(currentTD, function () {
+            $(this).attr("initialval", $(this).text())
+          $(this).prop('contenteditable', true)
+      });
+});
+
+$('#tbl').on('click', '.save', function() {
+    var $btn = $(this);
+    $('#tbl').find('.save, .cancel').hide();
+    $btn.hide().siblings('.edit').show();
+    currentTD = $(this).closest('td').siblings()
+    $.each(currentTD, function () {
+        $(this).prop('contenteditable', false)
+    });
+});
+
+$('#tbl').on('click', '.cancel', function() {
+    var $btn = $(this);
+    $('#tbl').find('.save, .cancel').hide();
+    $btn.hide().siblings('.edit').show();
+    currentTD = $(this).closest('td').siblings()
+    $.each(currentTD, function () {        
+        $(this).text($(this).attr("initialval"));
+        $(this).prop('contenteditable', false)
+    });
+});
+</script>
+    <script>
+        function deleteRow(btn) {
+            var row = btn.parentNode.parentNode;
+            row.parentNode.removeChild(row);
+        }
+    </script>
+
+    <!-- Menyisipkan JQuery dan Javascript Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>
